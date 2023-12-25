@@ -479,7 +479,6 @@ main {
 
 
 
-
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -489,8 +488,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom, #cdaa38, #ffc400); /* Gradient background from top to bottom */
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
@@ -506,16 +504,25 @@ main {
 }
 
 .navbar-link {
-  color: var(--light-gray);
-  font-size: var(--fs-8);
-  padding: 20px 7px;
+  color: var(--onyx); /* Dark text color */
+  font-size: var(--fs-6); /* Adjusted font size */
+  padding: 15px 10px; /* Reduced padding for a more compact look */
   transition: color var(--transition-1);
+  font-weight: bold;
 }
 
 .navbar-link:hover,
-.navbar-link:focus { color: var(--light-gray-70); }
+.navbar-link:focus {
+  color: var(--onyx); /* Dark text color on hover/focus */
+  background: var(--light-gray); /* Light background on hover/focus */
+  border-radius: 8px; /* Rounded corners */
+}
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active {
+  color: var(--onyx); /* Dark text color for active link */
+  background: var(--light-gray); /* Light background for active link */
+  border-radius: 8px; /* Rounded corners for active link */
+}
 
 
 
